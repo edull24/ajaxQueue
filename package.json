@@ -1,0 +1,23 @@
+{
+  "name": "ajaxQueue",
+  "version": "0.0.0",
+  "description": "ajaxQueue =========",
+  "main": "./dist/ajaxQueue.min.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edull24/ajaxQueue.git"
+  },
+  "author": "Evan Dull <evandull@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edull24/ajaxQueue/issues"
+  },
+  "homepage": "https://github.com/edull24/ajaxQueue"
+}
