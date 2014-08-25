@@ -40,11 +40,12 @@
 				this.queue.push($.Deferred(function(dfd) {
 
 					var queuedDfd;
+					var qLen = this.queue.length;
 
-					if (this.queue.length) {
+					if (qLen) {
 
 						// Get the previous queued request.
-						queuedDfd = this.queue[this.queue.length - 1];
+						queuedDfd = this.queue[qLen - 1];
 
 						// When the previous queued request is done, fire this one off.
 						$.when(queuedDfd).done(function() {
