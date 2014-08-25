@@ -5,7 +5,15 @@
   "main": "./dist/ajaxQueue.min.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.8.7"
+    "del": "^0.1.2",
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-strip-debug": "^1.0.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0",
+    "jshint-stylish": "^0.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
