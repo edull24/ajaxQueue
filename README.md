@@ -17,10 +17,10 @@ Add an ajax request to the queue:
       return $.ajax({
         type: 'post',
         cache: false,
-        url: '/user',
+        url: '/game/32',
         data: {
-          username: 'Roy',
-          password: 'wonderbat'
+          user: 'starlord'
+          score: 1000
         }
       });
       
