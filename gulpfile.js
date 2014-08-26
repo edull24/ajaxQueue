@@ -2,7 +2,20 @@
 
 var gulp = require('gulp');
 var del = require('del');
+var pkg = require('./package.json');
 var plugins = require('gulp-load-plugins')();
+
+var banner = [
+	'/*!',
+	' * <%= pkg.name %> - <%= pkg.description %>',
+	' * v<%= pkg.version %> ' + (new Date().toDateString()),
+	' * <%= pkg.homepage %>',
+	' *',
+	' * Copyright 2014, ' + (new Date().getFullYear()) + ' Evan Dull',
+	' * Released under the <%= pkg.license %> License',
+	' */',
+	''
+].join('\n');
 
 gulp.task('js', ['clean'], function() {
 
@@ -12,9 +25,27 @@ gulp.task('js', ['clean'], function() {
 		.pipe(plugins.jshint.reporter('fail'))
 		.pipe(plugins.stripDebug())
 		.pipe(gulp.dest('./dist'))
-		.pipe(plugins.uglify())
+		.pipe(plugins.uglify({
+			preserveComments: 'some'
+		}))
 		.pipe(plugins.rename({extname: '.min.js'}))
+		.pipe(plugins.header(banner, {pkg: pkg}))
 		.pipe(gulp.dest('./dist'));
+
+});
+
+gulp.task('size', ['build'], function() {
+
+	return gulp.src('./dist/*')
+		.pipe(plugins.size({
+			showFiles: true,
+			title: 'File Size:'
+		}))
+		.pipe(plugins.size({
+			showFiles: true,
+			gzip: true,
+			title: 'File Size (gzipped):'
+		}));
 
 });
 
@@ -37,4 +68,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['js']);
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'size']);
