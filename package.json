@@ -19,7 +19,7 @@
     "jshint-stylish": "^0.4.0"
   },
   "scripts": {
-    "test": "jasmine"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",

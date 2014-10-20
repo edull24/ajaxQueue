@@ -1,6 +1,8 @@
-describe("A suite", function() {
+'use strict';
 
-	it("contains spec with an expectation", function() {
+describe("ajaxQueue", function() {
+
+	it("test", function() {
 
 		expect(true).toBe(true);
 
