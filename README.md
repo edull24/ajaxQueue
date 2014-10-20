@@ -1,3 +1,5 @@
+[ ![Codeship Status for edull24/ajaxQueue](https://codeship.io/projects/8523c9d0-37dd-0132-1daa-26b918746a8c/status)](https://codeship.io/projects/41831)
+
 ajaxQueue
 =========
 
