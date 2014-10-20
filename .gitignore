@@ -16,5 +16,3 @@ jasmine_examples/Song.js
 spec/helpers/jasmine_examples/SpecHelper.js
 
 spec/jasmine_examples/PlayerSpec.js
-
-spec/support/jasmine.json
