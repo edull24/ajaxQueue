@@ -66,6 +66,15 @@ gulp.task('watch', function() {
 
 });
 
+gulp.task('test', function() {
+
+	return gulp.src('./spec/spec.js')
+		.pipe(plugins.jasmine({
+			verbose: true
+		}));
+
+});
+
 gulp.task('build', ['js']);
 
 gulp.task('default', ['build', 'size']);

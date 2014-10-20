@@ -6,8 +6,9 @@
   "dependencies": {},
   "devDependencies": {
     "del": "^0.1.2",
-    "gulp": "^3.8.7",
+    "gulp": "^3.8.8",
     "gulp-header": "^1.0.5",
+    "gulp-jasmine": "^1.0.1",
     "gulp-jshint": "^1.8.4",
     "gulp-load-plugins": "^0.5.3",
     "gulp-rename": "^1.2.0",
@@ -18,7 +19,7 @@
     "jshint-stylish": "^0.4.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
