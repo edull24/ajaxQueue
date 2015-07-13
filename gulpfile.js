@@ -24,6 +24,7 @@ gulp.task('js', ['clean'], function() {
 		.pipe(plugins.jshint.reporter(plugins.jshintStylish))
 		.pipe(plugins.jshint.reporter('fail'))
 		.pipe(plugins.stripDebug())
+		.pipe(plugins.rename({extname: '-' + pkg.version + '.js'}))
 		.pipe(gulp.dest('./dist'))
 		.pipe(plugins.uglify({
 			preserveComments: 'some'
