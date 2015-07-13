@@ -1,6 +1,6 @@
 {
   "name": "ajaxQueue",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Easily queue jQuery ajax requests",
   "main": "./dist/ajaxQueue.min.js",
   "dependencies": {},
